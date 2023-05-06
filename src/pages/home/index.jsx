@@ -11,7 +11,11 @@ export default function Home() {
         </div>
 
         <div className={styles.mainImg}>
-          <img className={styles.img} src="/main.png" alt="чел с мячём" />
+          <img
+            className={styles.img}
+            src={process.env.PUBLIC_URL + '/main.png'}
+            alt="чел с мячём"
+          />
         </div>
       </section>
       <h2>
@@ -23,7 +27,11 @@ export default function Home() {
         не нужно иметь талант.
       </p>
       <div className={styles.balls}>
-        <img className={styles.img} src="/balls.png" alt="чисто мячи" />
+        <img
+          className={styles.img}
+          src={process.env.PUBLIC_URL + '/balls.png'}
+          alt="чисто мячи"
+        />
       </div>
       <div className={styles.buttonContainer}>
         <Button text="ЗАПИСАТЬСЯ" />

@@ -1,0 +1,32 @@
+.card {
+  font-family: Norwester;
+  width: 370px;
+  height: 180px;
+  background: #171820;
+  border-radius: 12px;
+  padding: 28px;
+  display: flex;
+  /*   align-items: center; */
+  /*   justify-content: center; */
+  padding: 10px;
+  gap: 5px;
+}
+
+.heading {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 32px;
+}
+
+.text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  color: #a6a9b8;
+}
+
+.textContainer {
+  text-align: center;
+}

@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/hightrick/static/css/main.b13353af.css",
+    "main.js": "/hightrick/static/js/main.6b9d61c5.js",
+    "static/js/787.0cad08ac.chunk.js": "/hightrick/static/js/787.0cad08ac.chunk.js",
+    "static/media/Speckles.png": "/hightrick/static/media/Speckles.66f2aa823b143840b6ba.png",
+    "static/media/norwester.otf": "/hightrick/static/media/norwester.ce6a5871f21a2e4a9149.otf",
+    "index.html": "/hightrick/index.html",
+    "main.b13353af.css.map": "/hightrick/static/css/main.b13353af.css.map",
+    "main.6b9d61c5.js.map": "/hightrick/static/js/main.6b9d61c5.js.map",
+    "787.0cad08ac.chunk.js.map": "/hightrick/static/js/787.0cad08ac.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b13353af.css",
+    "static/js/main.6b9d61c5.js"
+  ]
+}

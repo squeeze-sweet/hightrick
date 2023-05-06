@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 36px;
+  background: linear-gradient(
+    212.8deg,
+    rgba(244, 244, 244, 0.4) 7.43%,
+    rgba(244, 244, 244, 0.1) 53.07%
+  );
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(20px);
+  border-radius: 6px;
+  font-family: Norwester;
+}
+
+.text {
+  font-family: 'mr_NorwesterG';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}

@@ -1,0 +1,35 @@
+.container {
+  width: 100%;
+  display: flex;
+  height: 190px;
+  background: #151515;
+}
+
+.left {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+
+.right {
+  flex-grow: 1;
+  padding-top: 62px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 25px;
+}
+
+.img {
+  width: 102px;
+  position: absolute;
+  top: -10px;
+}
+
+.logoText {
+  position: absolute;
+  top: 60px;
+}

@@ -1,0 +1,31 @@
+.mainImgContainer {
+  position: relative;
+  margin-bottom: 83px;
+}
+.mainImgTexts {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.img {
+  width: 100%;
+}
+.mainImg {
+  padding-top: 120px;
+}
+
+.subHeader {
+  margin-bottom: 99px;
+}
+
+.balls {
+  padding-bottom: 88px;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 190px;
+}

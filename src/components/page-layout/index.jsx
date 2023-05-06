@@ -1,6 +1,7 @@
 import styles from './page-content.module.css';
 import Navigation from '../navigation';
 import { Outlet } from 'react-router-dom';
+import Footer from '../footer';
 
 const Layout = ({ children }) => (
   <section className={styles.page}>
@@ -9,6 +10,7 @@ const Layout = ({ children }) => (
       {children}
       <Outlet />
     </main>
+    <Footer />
   </section>
 );
 

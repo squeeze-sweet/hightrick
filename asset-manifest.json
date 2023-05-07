@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/hightrick/static/css/main.a61c3da0.css",
-    "main.js": "/hightrick/static/js/main.41fb04e9.js",
+    "main.css": "/hightrick/static/css/main.cce32480.css",
+    "main.js": "/hightrick/static/js/main.ba48f8e4.js",
     "static/js/787.0cad08ac.chunk.js": "/hightrick/static/js/787.0cad08ac.chunk.js",
     "static/media/Speckles.png": "/hightrick/static/media/Speckles.66f2aa823b143840b6ba.png",
     "static/media/norwester.otf": "/hightrick/static/media/norwester.ce6a5871f21a2e4a9149.otf",
     "index.html": "/hightrick/index.html",
-    "main.a61c3da0.css.map": "/hightrick/static/css/main.a61c3da0.css.map",
-    "main.41fb04e9.js.map": "/hightrick/static/js/main.41fb04e9.js.map",
+    "main.cce32480.css.map": "/hightrick/static/css/main.cce32480.css.map",
+    "main.ba48f8e4.js.map": "/hightrick/static/js/main.ba48f8e4.js.map",
     "787.0cad08ac.chunk.js.map": "/hightrick/static/js/787.0cad08ac.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a61c3da0.css",
-    "static/js/main.41fb04e9.js"
+    "static/css/main.cce32480.css",
+    "static/js/main.ba48f8e4.js"
   ]
 }

@@ -12,6 +12,7 @@
   backdrop-filter: blur(20px);
   border-radius: 6px;
   font-family: Norwester;
+  cursor: pointer;
 }
 
 .text {

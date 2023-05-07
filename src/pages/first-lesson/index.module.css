@@ -1,0 +1,30 @@
+.header {
+  margin: 100px auto 165px;
+}
+
+.text {
+  margin-bottom: 170px;
+}
+
+.skills {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 220px;
+}
+
+.secondHeader {
+  margin-bottom: 258px;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  margin-bottom: 100px;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 190px;
+}

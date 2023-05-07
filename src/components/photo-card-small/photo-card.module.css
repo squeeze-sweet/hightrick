@@ -6,10 +6,20 @@
   border-radius: 12px;
   padding: 28px;
   display: flex;
-  /*   align-items: center; */
-  /*   justify-content: center; */
   padding: 10px;
   gap: 5px;
+}
+
+.photoContainer {
+  border-radius: 3px;
+  background: linear-gradient(90deg, #ff4040 0%, #ac00fd 100%);
+  flex-basis: 36px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .heading {

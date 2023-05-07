@@ -3,16 +3,9 @@ import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/page-layout';
 import Home from './pages/home';
 import AboutSchool from './pages/about-school';
+import AboutTrainer from './pages/about-trainer';
+import FirstLesson from './pages/first-lesson';
 
-// About Trained page component
-const AboutTrainedPage = () => <h1>About Trainer Page</h1>;
-
-// First Lesson page component
-const FirstLessonPage = () => <h1>First Lesson Page</h1>;
-
-// Layout componen
-
-// App component
 const App = () => {
   return (
     <Router>
@@ -20,8 +13,8 @@ const App = () => {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="about-school" element={<AboutSchool />} />
-          <Route path="about-trainer" element={<AboutTrainedPage />} />
-          <Route path="first-lesson" element={<FirstLessonPage />} />
+          <Route path="about-trainer" element={<AboutTrainer />} />
+          <Route path="first-lesson" element={<FirstLesson />} />
         </Route>
       </Routes>
     </Router>

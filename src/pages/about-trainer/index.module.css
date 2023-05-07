@@ -1,0 +1,18 @@
+.header {
+  margin: 100px auto 165px;
+}
+
+.video {
+  margin: 165px auto;
+  margin-bottom: 100px;
+}
+
+.text {
+  margin-bottom: 100px;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 190px;
+}

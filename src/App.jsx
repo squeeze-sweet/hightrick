@@ -2,11 +2,7 @@ import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Layout from './components/page-layout';
 import Home from './pages/home';
-// Main page component
-const MainPage = () => <h1>Main Page</h1>;
-
-// About School page component
-const AboutSchoolPage = () => <h1>About School Page</h1>;
+import AboutSchool from './pages/about-school';
 
 // About Trained page component
 const AboutTrainedPage = () => <h1>About Trainer Page</h1>;
@@ -23,7 +19,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="about-school" element={<AboutSchoolPage />} />
+          <Route path="about-school" element={<AboutSchool />} />
           <Route path="about-trainer" element={<AboutTrainedPage />} />
           <Route path="first-lesson" element={<FirstLessonPage />} />
         </Route>

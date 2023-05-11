@@ -14,10 +14,18 @@ export default function Footer() {
         </div>
       </div>
       <div className={styles.right}>
+        <IconWithText
+          iconScr={'/vk.svg'}
+          text="Vkontakte"
+          href="https://vk.com/hightrick_school"
+        />
+        <IconWithText
+          iconScr={'/youtube.svg'}
+          text="YouTube"
+          href="https://www.youtube.com/channel/UCNVTADsJOt0RBDeGEbTSEsQ"
+        />
         <IconWithText iconScr={'/whatsapp.svg'} text="+7(912) 272-04-09" />
-        <IconWithText iconScr={'/vk.svg'} text="Vkontakte" />
-        <IconWithText iconScr={'/youtube.svg'} text="YouTube" />
-        <IconWithText iconScr={'/gmail.svg'} text="Gmail" />
+        <IconWithText iconScr={'/gmail.svg'} text="hightrick@mail.ru" />
       </div>
     </section>
   );

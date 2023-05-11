@@ -1,14 +1,16 @@
 import styles from './icon-with-text.module.css';
-
-export default function IconWithText({ iconScr, text }) {
+import cn from 'classnames';
+export default function IconWithText({ iconScr, text, href }) {
   return (
-    <button className={styles.container}>
+    <button className={cn(styles.container, { [styles.clickable]: href })}>
       <img
         className={styles.img}
         src={process.env.PUBLIC_URL + iconScr}
         alt=""
       />
-      <p className={styles.text}>{text}</p>
+      <a className={styles.text} href={href}>
+        {text}
+      </a>
     </button>
   );
 }

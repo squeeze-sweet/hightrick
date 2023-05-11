@@ -7,7 +7,7 @@ import styles from './index.module.css';
 export default function FirstLesson() {
   return (
     <>
-      <h2 className={styles.header}>Чему вы научитесь</h2>
+      <h2 className={styles.header}>чему вы научитесь</h2>
       <p className={styles.text}>
         На занятиях по фристайлу мы обучаем чеканке и трюкам футбольного
         фристайла, а также уделяем внимание работе над техническими навыками

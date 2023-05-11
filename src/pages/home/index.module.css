@@ -8,6 +8,9 @@
   left: 0;
   top: 0;
 }
+.bottomParagraph {
+  margin-bottom: 60px;
+}
 
 .img {
   width: 100%;

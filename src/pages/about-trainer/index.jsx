@@ -7,6 +7,7 @@ export default function AboutTrainer() {
     <>
       <h2 className={styles.header}>наш Тренер</h2>
       <PhotoCard
+        className={styles.photoCard}
         photoSrc={'/master.png'}
         heading="О тренере"
         text={`Главным тренером нашей школы является российский фристайлер,
@@ -14,11 +15,7 @@ export default function AboutTrainer() {
             по мини-футболу и четырехкратный призер соревнований по футбольному
             фристайлу среди стран СНГ - Фаридонов Ришат. Тренерский стаж: 6 лет`}
       />
-      <img
-        className={styles.video}
-        src={process.env.PUBLIC_URL + '/video.png'}
-        alt=""
-      />
+
       <p className={styles.text}>
         Так же у Вас есть возможность записаться на индивидуальные занятия . В
         данном случае ведётся полный контроль за прогрессом и успехами ученика.

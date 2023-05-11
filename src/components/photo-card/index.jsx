@@ -1,8 +1,8 @@
 import styles from './photo-card.module.css';
 
-export default function PhotoCard({ photoSrc, heading, text }) {
+export default function PhotoCard({ photoSrc, heading, text, className }) {
   return (
-    <div className={styles.card}>
+    <div className={`${styles.card} + ${className}`}>
       <div className={styles.photoContainer}>
         <img
           className={styles.img}

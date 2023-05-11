@@ -8,9 +8,12 @@
 }
 
 .text {
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 
+.contact {
+  margin-bottom: 100px;
+}
 .buttonContainer {
   display: flex;
   justify-content: center;

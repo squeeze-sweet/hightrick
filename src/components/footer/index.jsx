@@ -4,12 +4,14 @@ export default function Footer() {
   return (
     <section className={styles.container}>
       <div className={styles.left}>
-        <img
-          className={styles.img}
-          src={process.env.PUBLIC_URL + '/logo.svg'}
-          alt=""
-        />
-        <p className={styles.logoText}>Hightrick</p>
+        <div className={styles.logoContainer}>
+          <img
+            className={styles.img}
+            src={process.env.PUBLIC_URL + '/logo.svg'}
+            alt=""
+          />
+          <p className={styles.logoText}>Hightrick</p>
+        </div>
       </div>
       <div className={styles.right}>
         <IconWithText iconScr={'/whatsapp.svg'} text="+7(912) 272-04-09" />

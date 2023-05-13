@@ -1,6 +1,9 @@
 @font-face {
   font-family: 'Norwester';
   src: url('norwester.otf');
+  src: local('☺'), url('norwester.ttf') format('truetype'),
+    url('norwester.woff') format('woff'), url('norwester.woff2') format('woff2'),
+    url('norwester.svg') format('svg');
   font-weight: normal;
   font-style: normal;
 }

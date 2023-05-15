@@ -14,7 +14,7 @@ export default function AboutSchool() {
       <section className={styles.info}>
         <div className={styles.left}>
           <h3>Стоимость занятий</h3>
-          <InfoCard heading="Первая тренировка" text="Бесплатно" />
+          <InfoCard heading="Первая тренировка" text="Бесплатно" highlighted />
           <InfoCard heading="Разовое посещение" text="500 рублей" />
           <InfoCard
             heading="Абонемент на месяц"

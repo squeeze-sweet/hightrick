@@ -6,9 +6,16 @@
   margin-bottom: 100px;
 }
 
-.video {
-  margin: 165px auto;
+.iframeContainer {
+  overflow: hidden;
+  border-radius: 16px;
+  position: relative;
+  width: 100%;
   margin-bottom: 100px;
+}
+
+.iframeFiller {
+  padding-top: 56.25%;
 }
 
 .text {

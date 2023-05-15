@@ -24,7 +24,7 @@ export default function Map() {
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
-      <Marker position={[56.826166081488516, 60.59849314370995]}>
+      <Marker position={[56.82505596456699, 60.598195177852]}>
         <Popup>Куйбышева 32а к1, ДС “Снежинка”</Popup>
       </Marker>
     </MapContainer>

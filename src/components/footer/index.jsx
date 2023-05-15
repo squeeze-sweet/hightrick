@@ -24,6 +24,7 @@ export default function Footer() {
           text="YouTube"
           href="https://www.youtube.com/channel/UCNVTADsJOt0RBDeGEbTSEsQ"
         />
+        <IconWithText iconScr={'/telegram.svg'} text="telegram" href="" />
         <IconWithText iconScr={'/whatsapp.svg'} text="+7(912) 272-04-09" />
         <IconWithText iconScr={'/gmail.svg'} text="hightrick@mail.ru" />
       </div>

@@ -6,7 +6,7 @@ export default function Home() {
     <>
       <section className={styles.mainImgContainer}>
         <div className={styles.mainImgTexts}>
-          <h1>Hightrick</h1>
+          <h1>HighTrick</h1>
           <p className={styles.p}>Школа фристайла и футбольной техники</p>
         </div>
 

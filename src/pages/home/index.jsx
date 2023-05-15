@@ -21,7 +21,7 @@ export default function Home() {
           />
         </div>
       </section>
-      <h2>
+      <h2 className={styles.secondHeading}>
         Что такое футбольный <br /> фристайл
       </h2>
       <p className={styles.bottomParagraph}>

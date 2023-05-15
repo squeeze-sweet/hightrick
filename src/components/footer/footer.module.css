@@ -18,6 +18,7 @@
   align-items: center;
   justify-content: center;
   gap: 25px;
+  flex-wrap: wrap;
 }
 
 .logoContainer {
@@ -30,8 +31,11 @@
   background-color: rgb(136, 141, 145);
 }
 
-.img {
-}
-
-.logoText {
+@media only screen and (max-width: 769px) {
+  .container {
+    padding: 20px 10px;
+  }
+  .left {
+    display: none;
+  }
 }

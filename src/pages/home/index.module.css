@@ -8,6 +8,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .mainHeading:hover {
   background: linear-gradient(90deg, #ff4040 0%, #ac00fd 100%);
   background-clip: text;
@@ -21,6 +22,7 @@
   left: 0;
   top: 0;
 }
+
 .bottomParagraph {
   margin-bottom: 60px;
 }
@@ -28,6 +30,7 @@
 .img {
   width: 100%;
 }
+
 .mainImg {
   padding-top: 120px;
 }
@@ -36,6 +39,9 @@
   margin-bottom: 99px;
 }
 
+.secondHeading {
+  margin-bottom: 20px;
+}
 .balls {
   padding-bottom: 88px;
 }
@@ -44,4 +50,23 @@
   display: flex;
   justify-content: center;
   margin-bottom: 190px;
+}
+
+/* Планшеты в горизонтальной ориентации и некоторые небольшие ноутбуки */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .mainImg {
+    padding-top: 100px;
+  }
+}
+
+@media only screen and (max-width: 769px) {
+  .mainImg {
+    padding-top: 60px;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .mainImg {
+    padding-top: 35px;
+  }
 }

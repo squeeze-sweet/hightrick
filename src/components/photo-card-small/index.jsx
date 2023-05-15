@@ -11,7 +11,7 @@ export default function PhotoCardSmall({ photoSrc, heading, text }) {
         />
       </div>
       <div className={styles.textContainer}>
-        <h4 className={styles.heading}>{heading}</h4>
+        <h3 className={styles.heading}>{heading}</h3>
         <div className={styles.text}>{text}</div>
       </div>
     </div>

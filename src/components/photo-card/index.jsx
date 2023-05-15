@@ -3,16 +3,15 @@ import styles from './photo-card.module.css';
 export default function PhotoCard({ photoSrc, heading, text, className }) {
   return (
     <div className={`${styles.card} + ${className}`}>
-      <div className={styles.photoContainer}>
-        <img
-          className={styles.img}
-          src={process.env.PUBLIC_URL + photoSrc}
-          alt=""
-        />
-      </div>
+      <img
+        className={styles.img}
+        src={process.env.PUBLIC_URL + photoSrc}
+        alt=""
+      />
+
       <div className={styles.textContainer}>
-        <h4 className={styles.heading}>{heading}</h4>
-        <div className={styles.text}>{text}</div>
+        <h3 className={styles.heading}>{heading}</h3>
+        <p>{text}</p>
       </div>
     </div>
   );

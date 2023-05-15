@@ -2,6 +2,19 @@
   position: relative;
   margin-bottom: 83px;
 }
+
+.mainHeadingContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mainHeading:hover {
+  background: linear-gradient(90deg, #ff4040 0%, #ac00fd 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: rgba(0, 0, 0, 0);
+}
+
 .mainImgTexts {
   position: absolute;
   width: 100%;

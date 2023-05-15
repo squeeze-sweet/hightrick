@@ -12,6 +12,7 @@
 }
 
 .text {
+  cursor: pointer;
   font-family: 'mr_NorwesterG';
   font-style: normal;
   font-weight: 400;

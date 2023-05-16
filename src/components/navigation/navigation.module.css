@@ -26,7 +26,10 @@
 }
 
 .link:hover {
-  background-color: gray;
+  background: linear-gradient(90deg, #ff4040 0%, #ac00fd 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: rgba(0, 0, 0, 0);
 }
 
 .active {

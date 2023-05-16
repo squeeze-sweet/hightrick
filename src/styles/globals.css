@@ -78,49 +78,26 @@ p {
   text-align: center;
 }
 
-/* Мобильные устройства (телефоны) */
-@media only screen and (max-width: 768px) {
+/* ПК и некоторые большие ноутбуки */
+@media only screen and (min-width: 1025px) {
   h1 {
-    font-size: 100px;
-    line-height: 120px;
+    font-size: 200px;
+    line-height: 240px;
   }
 
   h2 {
-    font-size: 32px;
-    line-height: 38px;
+    font-size: 64px;
+    line-height: 77px;
   }
 
   h3 {
-    font-size: 24px;
-    line-height: 38px;
+    font-size: 48px;
+    line-height: 76px;
   }
 
   p {
-    font-size: 18px;
-    line-height: 22px;
-  }
-}
-
-/* Мобильные устройства (планшеты в вертикальной ориентации) */
-@media only screen and (max-width: 470px) {
-  h1 {
-    font-size: 60px;
-    line-height: 70px;
-  }
-
-  h2 {
-    font-size: 24px;
-    line-height: 30px;
-  }
-
-  h3 {
-    font-size: 24px;
-    line-height: 38px;
-  }
-
-  p {
-    font-size: 16px;
-    line-height: 22px;
+    font-size: 34px;
+    line-height: 41px;
   }
 }
 
@@ -147,25 +124,48 @@ p {
   }
 }
 
-/* ПК и некоторые большие ноутбуки */
-@media only screen and (min-width: 1025px) {
+/* Мобильные устройства (планшеты в вертикальной ориентации) */
+@media only screen and (max-width: 470px) {
   h1 {
-    font-size: 200px;
-    line-height: 240px;
+    font-size: 60px;
+    line-height: 70px;
   }
 
   h2 {
-    font-size: 64px;
-    line-height: 77px;
+    font-size: 24px;
+    line-height: 30px;
   }
 
   h3 {
-    font-size: 48px;
-    line-height: 76px;
+    font-size: 24px;
+    line-height: 38px;
   }
 
   p {
-    font-size: 34px;
-    line-height: 41px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+/* Мобильные устройства (телефоны) */
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 100px;
+    line-height: 120px;
+  }
+
+  h2 {
+    font-size: 32px;
+    line-height: 38px;
+  }
+
+  h3 {
+    font-size: 24px;
+    line-height: 38px;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 22px;
   }
 }

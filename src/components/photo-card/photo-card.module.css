@@ -5,7 +5,7 @@
   border-radius: 16px;
   padding: 26px 26px 20px 20px;
   display: flex;
-  flex-wrap: wrap;
+  /*   flex-wrap: wrap; */
   align-items: center;
   justify-content: center;
   gap: 100px;
@@ -16,13 +16,16 @@
   border-bottom: 0.8px solid #bfbfbf;
   margin-bottom: 25px;
 }
-
+.imgContainer {
+  width: 33%;
+}
 .textContainer {
   text-align: center;
+  width: 66%;
 }
 
 .img {
-  max-width: 500px;
+  width: 100%;
 }
 
 @media only screen and (max-width: 769px) {
@@ -32,5 +35,52 @@
   }
   .img {
     width: 100%;
+  }
+}
+
+/* Мобильные устройства (телефоны) */
+@media only screen and (max-width: 768px) {
+  .heading {
+    font-size: 24px;
+    line-height: 38px;
+  }
+  .text {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+/* Мобильные устройства (планшеты в вертикальной ориентации) */
+@media only screen and (max-width: 860px) {
+  .card {
+    flex-wrap: wrap;
+  }
+}
+
+/* ПК и некоторые большие ноутбуки */
+@media only screen and (max-width: 1300px) {
+  .heading {
+    font-size: 26px;
+    line-height: 38px;
+  }
+  .text {
+    font-size: 22px;
+    line-height: 22px;
+  }
+  .card {
+    gap: 40px;
+    padding: 24px 24px;
+  }
+}
+
+/* Планшеты в горизонтальной ориентации и некоторые небольшие ноутбуки */
+@media only screen and (max-width: 1100px) {
+  .heading {
+    font-size: 20px;
+    line-height: 38px;
+  }
+  .text {
+    font-size: 16px;
+    line-height: 22px;
   }
 }

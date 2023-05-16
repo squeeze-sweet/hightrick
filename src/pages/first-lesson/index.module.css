@@ -8,7 +8,6 @@
 
 .skills {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
   margin-bottom: 220px;
@@ -29,4 +28,10 @@
   display: flex;
   justify-content: center;
   margin-bottom: 190px;
+}
+
+@media only screen and (max-width: 1400px) {
+  .skills {
+    flex-wrap: wrap;
+  }
 }

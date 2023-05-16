@@ -28,7 +28,11 @@
   height: 70px;
   padding: 0 20px 0 0;
   border-radius: 10px;
-  background-color: rgb(136, 141, 145);
+  background-color: rgb(255, 255, 255);
+}
+.logoText {
+  color: #222858;
+  margin-left: -20px;
 }
 
 @media only screen and (max-width: 769px) {

@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from 'react';
 
 export default function AboutTrainer() {
   return (
-    <>
+    <div className={styles.page}>
       <h2 className={styles.header}>наш Тренер</h2>
       <PhotoCard
         className={styles.photoCard}
@@ -31,6 +31,6 @@ export default function AboutTrainer() {
       <div className={styles.buttonContainer}>
         <Button text="ЗАПИСАТЬСЯ" />
       </div>
-    </>
+    </div>
   );
 }

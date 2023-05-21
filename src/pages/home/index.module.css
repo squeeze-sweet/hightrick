@@ -1,3 +1,9 @@
+.page {
+  width: 66%;
+  margin: 0 auto;
+  text-align: center;
+}
+
 .mainImgContainer {
   position: relative;
   margin-bottom: 83px;

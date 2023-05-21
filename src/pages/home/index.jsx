@@ -32,7 +32,7 @@ export default function Home() {
   }, [videoRef.current, isPlaying]);
 
   return (
-    <>
+    <div className={styles.page}>
       <section className={styles.mainImgContainer}>
         <div className={styles.mainImgTexts}>
           <div className={styles.mainHeadingContainer}>
@@ -77,6 +77,6 @@ export default function Home() {
       <div className={styles.buttonContainer}>
         <Button text="ЗАПИСАТЬСЯ" />
       </div>
-    </>
+    </div>
   );
 }

@@ -5,7 +5,7 @@ import Button from '../../components/button';
 
 export default function AboutSchool() {
   return (
-    <>
+    <div className={styles.page}>
       <h2 className={styles.header}>о нашей школе</h2>
       <p className={styles.locationInfo}>
         Мы находимся по адресу: <br /> г. Екатеринбург <br /> Куйбышева 32а к1,
@@ -33,6 +33,6 @@ export default function AboutSchool() {
       <div className={styles.buttonContainer}>
         <Button text="ЗАПИСАТЬСЯ" />
       </div>
-    </>
+    </div>
   );
 }

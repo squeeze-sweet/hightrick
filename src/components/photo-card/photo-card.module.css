@@ -3,7 +3,7 @@
   width: 100%;
   background: #171820;
   border-radius: 16px;
-  padding: 26px 26px 20px 20px;
+  padding: 49px;
   display: flex;
   /*   flex-wrap: wrap; */
   align-items: center;
@@ -15,72 +15,121 @@
 .heading {
   border-bottom: 0.8px solid #bfbfbf;
   margin-bottom: 25px;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 0em;
 }
 .imgContainer {
-  width: 33%;
 }
 .textContainer {
   text-align: center;
   width: 66%;
 }
 
+.text {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0em;
+  text-align: center;
+}
 .img {
   width: 100%;
 }
 
-@media only screen and (max-width: 769px) {
-  .card {
-    padding: 10px 5px;
-    gap: 20px;
-  }
-  .img {
-    width: 100%;
-  }
-}
-
-/* Мобильные устройства (телефоны) */
-@media only screen and (max-width: 768px) {
-  .heading {
-    font-size: 24px;
-    line-height: 38px;
-  }
-  .text {
-    font-size: 18px;
-    line-height: 22px;
-  }
-}
-
 /* Мобильные устройства (планшеты в вертикальной ориентации) */
-@media only screen and (max-width: 860px) {
+@media only screen and (max-width: 1440px) {
   .card {
-    flex-wrap: wrap;
+    gap: 70px;
   }
-}
-
-/* ПК и некоторые большие ноутбуки */
-@media only screen and (max-width: 1300px) {
   .heading {
-    font-size: 26px;
-    line-height: 38px;
+    margin-bottom: 15px;
+    font-size: 32px;
+    line-height: 40px;
   }
   .text {
-    font-size: 22px;
-    line-height: 22px;
-  }
-  .card {
-    gap: 40px;
-    padding: 24px 24px;
+    font-size: 20px;
+    line-height: 26px;
+    letter-spacing: 0em;
   }
 }
 
-/* Планшеты в горизонтальной ориентации и некоторые небольшие ноутбуки */
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 1200px) {
+  .card {
+    padding: 30px;
+  }
   .heading {
-    font-size: 20px;
-    line-height: 38px;
+    margin-bottom: 15px;
+    font-size: 28px;
+    line-height: 40px;
   }
   .text {
     font-size: 16px;
-    line-height: 22px;
+    line-height: 26px;
+    letter-spacing: 0em;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .card {
+    padding: 20px;
+    gap: 40px;
+  }
+  .heading {
+    margin-bottom: 15px;
+    font-size: 28px;
+    line-height: 40px;
+  }
+  .text {
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0em;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .card {
+    padding: 20px;
+    gap: 20px;
+  }
+  .heading {
+    margin-bottom: 10px;
+    font-size: 24px;
+    line-height: 40px;
+  }
+  .text {
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0em;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .card {
+    flex-direction: column;
+  }
+  .heading {
+    margin-bottom: 15px;
+    font-size: 28px;
+    line-height: 40px;
+  }
+  .text {
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0em;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .heading {
+    margin-bottom: 10px;
+    font-size: 24px;
+    line-height: 40px;
+  }
+  .text {
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0em;
   }
 }

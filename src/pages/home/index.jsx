@@ -1,10 +1,13 @@
 import Button from '../../components/button';
 import ReactPlayer from 'react-player';
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
+import { Modal, Input, Grid } from 'antd';
 import styles from './index.module.css';
+import TextArea from 'antd/es/input/TextArea';
 
 export default function Home() {
   const [isPlaying, setIsPlaying] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const videoRef = useRef(null);
   useEffect(() => {
@@ -31,8 +34,47 @@ export default function Home() {
     }
   }, [videoRef.current, isPlaying]);
 
+  console.log('is', isModalOpen);
+
+  const showModal = useCallback(() => {
+    setIsModalOpen(true);
+  }, [setIsModalOpen]);
+
+  const handleOk = useCallback(() => {
+    setIsModalOpen(false);
+  }, [setIsModalOpen]);
+
+  const handleCancel = useCallback(() => {
+    setIsModalOpen(false);
+  }, [setIsModalOpen]);
+
   return (
     <div className={styles.page}>
+      <Modal
+        position="center"
+        title="Записаться на тренировку"
+        open={isModalOpen}
+        onOk={handleOk}
+        onCancel={handleCancel}
+        okText="Отправить"
+        cancelText="Отмена"
+        className={styles.fontClass}
+        okButtonProps={{ className: styles.okButton }}
+        cancelButtonProps={{ className: styles.fontClass }}
+      >
+        <div className={styles.formContent}>
+          <Input className={styles.fontClass} placeholder="Ваше имя"></Input>
+          <Input
+            className={styles.fontClass}
+            placeholder="Номер для связи"
+          ></Input>
+          <Input className={styles.fontClass} placeholder="Почта"></Input>
+          <TextArea
+            className={styles.fontClass}
+            placeholder="Дополнительные данные"
+          ></TextArea>
+        </div>
+      </Modal>
       <section className={styles.mainImgContainer}>
         <div className={styles.mainImgTexts}>
           <div className={styles.mainHeadingContainer}>
@@ -75,7 +117,7 @@ export default function Home() {
         ></ReactPlayer>
       </div>
       <div className={styles.buttonContainer}>
-        <Button text="ЗАПИСАТЬСЯ" />
+        <Button onClick={showModal} text="ЗАПИСАТЬСЯ" />
       </div>
     </div>
   );

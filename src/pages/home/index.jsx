@@ -104,6 +104,7 @@ export default function Home() {
       <div ref={videoRef} className={styles.iframeContainer}>
         <div className={styles.iframeFiller}> </div>
         <ReactPlayer
+          controls
           url="https://www.youtube.com/embed/w6iHoQXTSYA"
           playing={isPlaying}
           muted={!isPlaying}

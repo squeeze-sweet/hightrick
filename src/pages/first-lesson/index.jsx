@@ -1,12 +1,19 @@
+import { useCallback, useState } from 'react';
 import PhotoCard from '../../components/photo-card';
 import SmallCard from '../../components/photo-card-small';
 import Button from '../../components/button';
-
+import Form from '../../components/form';
 import styles from './index.module.css';
 
 export default function FirstLesson() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const showModal = useCallback(() => {
+    setIsModalOpen(true);
+  }, [setIsModalOpen]);
+
   return (
     <div className={styles.page}>
+      <Form isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
       <h2 className={styles.header}>чему вы научитесь</h2>
       <p className={styles.text}>
         На занятиях по фристайлу мы обучаем чеканке и трюкам футбольного
@@ -62,7 +69,7 @@ export default function FirstLesson() {
       </section>
 
       <div className={styles.buttonContainer}>
-        <Button text="ЗАПИСАТЬСЯ" />
+        <Button onClick={showModal} text="ЗАПИСАТЬСЯ" />
       </div>
     </div>
   );

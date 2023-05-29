@@ -2,10 +2,18 @@ import styles from './index.module.css';
 import InfoCard from '../../components/info-card';
 import Map from '../../components/map';
 import Button from '../../components/button';
+import Form from '../../components/form';
+import { useCallback, useState } from 'react';
 
 export default function AboutSchool() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const showModal = useCallback(() => {
+    setIsModalOpen(true);
+  }, [setIsModalOpen]);
+
   return (
     <div className={styles.page}>
+      <Form isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
       <h2 className={styles.header}>о нашей школе</h2>
       <p className={styles.locationInfo}>
         Мы находимся по адресу: <br /> г. Екатеринбург <br /> Куйбышева 32а к1,
@@ -31,7 +39,7 @@ export default function AboutSchool() {
         <Map />
       </div>
       <div className={styles.buttonContainer}>
-        <Button text="ЗАПИСАТЬСЯ" />
+        <Button onClick={showModal} text="ЗАПИСАТЬСЯ" />
       </div>
     </div>
   );

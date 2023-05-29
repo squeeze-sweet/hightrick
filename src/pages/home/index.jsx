@@ -1,13 +1,24 @@
 import Button from '../../components/button';
 import ReactPlayer from 'react-player';
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { Modal, Input, Grid } from 'antd';
+
 import styles from './index.module.css';
-import TextArea from 'antd/es/input/TextArea';
+
+import Form from '../../components/form';
 
 export default function Home() {
   const [isPlaying, setIsPlaying] = useState(false);
+  const [isMuted, setIsMuted] = useState(true);
+
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  useEffect(() => {
+    if (isPlaying) {
+      setTimeout(() => {
+        setIsMuted(false);
+      }, 500);
+    }
+  }, [isPlaying]);
 
   const videoRef = useRef(null);
   useEffect(() => {
@@ -34,47 +45,13 @@ export default function Home() {
     }
   }, [videoRef.current, isPlaying]);
 
-  console.log('is', isModalOpen);
-
   const showModal = useCallback(() => {
     setIsModalOpen(true);
   }, [setIsModalOpen]);
 
-  const handleOk = useCallback(() => {
-    setIsModalOpen(false);
-  }, [setIsModalOpen]);
-
-  const handleCancel = useCallback(() => {
-    setIsModalOpen(false);
-  }, [setIsModalOpen]);
-
   return (
     <div className={styles.page}>
-      <Modal
-        position="center"
-        title="Записаться на тренировку"
-        open={isModalOpen}
-        onOk={handleOk}
-        onCancel={handleCancel}
-        okText="Отправить"
-        cancelText="Отмена"
-        className={styles.fontClass}
-        okButtonProps={{ className: styles.okButton }}
-        cancelButtonProps={{ className: styles.fontClass }}
-      >
-        <div className={styles.formContent}>
-          <Input className={styles.fontClass} placeholder="Ваше имя"></Input>
-          <Input
-            className={styles.fontClass}
-            placeholder="Номер для связи"
-          ></Input>
-          <Input className={styles.fontClass} placeholder="Почта"></Input>
-          <TextArea
-            className={styles.fontClass}
-            placeholder="Дополнительные данные"
-          ></TextArea>
-        </div>
-      </Modal>
+      <Form isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
       <section className={styles.mainImgContainer}>
         <div className={styles.mainImgTexts}>
           <div className={styles.mainHeadingContainer}>
@@ -105,9 +82,10 @@ export default function Home() {
         <div className={styles.iframeFiller}> </div>
         <ReactPlayer
           controls
+          volume={0.1}
           url="https://www.youtube.com/embed/w6iHoQXTSYA"
           playing={isPlaying}
-          muted={!isPlaying}
+          muted={isMuted}
           width="100%"
           height="100%"
           style={{

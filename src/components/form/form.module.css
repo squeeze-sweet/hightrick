@@ -1,0 +1,11 @@
+.fontClass {
+  font-family: Norwester;
+}
+
+.formContent > *:not(:last-child) {
+  margin-bottom: 20px;
+}
+.okButton {
+  background: linear-gradient(90deg, #ff4040 0%, #ac00fd 100%);
+  font-family: Norwester;
+}

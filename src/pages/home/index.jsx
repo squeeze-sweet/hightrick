@@ -13,7 +13,7 @@ export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const videoRef = useRef(null);
 
-  /*   useEffect(() => {
+  useEffect(() => {
     if (isPlaying) {
       const enableSound = () => {
         setIsMuted(false);
@@ -32,7 +32,7 @@ export default function Home() {
 
       window.requestAnimationFrame(handleAnimation);
     }
-  }, [isPlaying]); */
+  }, [isPlaying]);
 
   useEffect(() => {
     if (videoRef.current && !isPlaying) {
@@ -100,7 +100,7 @@ export default function Home() {
           volume={0.1}
           url="https://www.youtube.com/embed/w6iHoQXTSYA"
           playing={isPlaying}
-          muted={false}
+          muted={isMuted}
           width="100%"
           height="100%"
           style={{

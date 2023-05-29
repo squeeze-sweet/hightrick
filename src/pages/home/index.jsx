@@ -11,28 +11,43 @@ export default function Home() {
   const [isMuted, setIsMuted] = useState(true);
 
   const [isModalOpen, setIsModalOpen] = useState(false);
-
-  useEffect(() => {
-    if (isPlaying) {
-      setTimeout(() => {
-        setIsMuted(false);
-      }, 500);
-    }
-  }, [isPlaying]);
-
   const videoRef = useRef(null);
+
+  /*   useEffect(() => {
+    if (isPlaying) {
+      const enableSound = () => {
+        setIsMuted(false);
+      };
+
+      const handleAnimation = () => {
+        if (
+          videoRef.current &&
+          videoRef.current.getBoundingClientRect().top <= window.innerHeight
+        ) {
+          enableSound();
+        } else {
+          window.requestAnimationFrame(handleAnimation);
+        }
+      };
+
+      window.requestAnimationFrame(handleAnimation);
+    }
+  }, [isPlaying]); */
+
   useEffect(() => {
     if (videoRef.current && !isPlaying) {
       const handleScroll = () => {
         const viewportHeight = window.innerHeight;
-        const imageElement = videoRef.current;
-        if (imageElement) {
-          const { top, bottom, height } = imageElement.getBoundingClientRect();
-          const imagePosition = top + height / 2;
-          const isCentered =
-            imagePosition >= viewportHeight / 2 &&
-            imagePosition <= viewportHeight / 2 + 1; // Устанавливаем погрешность в 1 пиксель
-          setIsPlaying(true);
+        const videoElement = videoRef.current;
+        if (videoElement) {
+          const { top, bottom, height } = videoElement.getBoundingClientRect();
+          const videoPosition = top + height / 2;
+
+          console.log('videoPosition', videoPosition);
+          console.log('viewportHeight', viewportHeight);
+          const isCentered = videoPosition < viewportHeight;
+          console.log('isCentered', isCentered);
+          setIsPlaying(isCentered); // Start the video when it is centered
         }
       };
       window.addEventListener('scroll', handleScroll);
@@ -85,7 +100,7 @@ export default function Home() {
           volume={0.1}
           url="https://www.youtube.com/embed/w6iHoQXTSYA"
           playing={isPlaying}
-          muted={isMuted}
+          muted={false}
           width="100%"
           height="100%"
           style={{

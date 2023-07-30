@@ -6,19 +6,17 @@ import Form from '../../components/form';
 import { useCallback, useState } from 'react';
 
 export default function AboutSchool() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const showModal = useCallback(() => {
-    setIsModalOpen(true);
-  }, [setIsModalOpen]);
-
   return (
     <div className={styles.page}>
-      <Form isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
       <h2 className={styles.header}>о нашей школе</h2>
       <p className={styles.locationInfo}>
         Мы находимся по адресу: <br /> г. Екатеринбург <br /> Куйбышева 32а к1,
         ДС “Снежинка”
       </p>
+
+      <div className={styles.mapContainer}>
+        <Map />
+      </div>
       <section className={styles.info}>
         <div className={styles.left}>
           <h3>Стоимость занятий</h3>
@@ -35,12 +33,6 @@ export default function AboutSchool() {
           <InfoCard heading="Воскресенье:" text="c 19:30 до 20:30" />
         </div>
       </section>
-      <div className={styles.mapContainer}>
-        <Map />
-      </div>
-      <div className={styles.buttonContainer}>
-        <Button onClick={showModal} text="ЗАПИСАТЬСЯ" />
-      </div>
     </div>
   );
 }

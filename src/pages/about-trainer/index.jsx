@@ -5,13 +5,8 @@ import Form from '../../components/form';
 import { useCallback, useState } from 'react';
 
 export default function AboutTrainer() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const showModal = useCallback(() => {
-    setIsModalOpen(true);
-  }, [setIsModalOpen]);
   return (
     <div className={styles.page}>
-      <Form isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
       <h2 className={styles.header}>наш Тренер</h2>
       <PhotoCard
         className={styles.photoCard}
@@ -33,10 +28,6 @@ export default function AboutTrainer() {
         По любым интересующим Вас вопросам Вы можете обращаться по номеру:
         8(912)-272-04-09 - Ришат
       </p>
-
-      <div className={styles.buttonContainer}>
-        <Button onClick={showModal} text="ЗАПИСАТЬСЯ" />
-      </div>
     </div>
   );
 }

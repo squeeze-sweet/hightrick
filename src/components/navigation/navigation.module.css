@@ -35,3 +35,9 @@
 .active {
   color: #f5f7f5;
 }
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 190px;
+}

@@ -3,6 +3,9 @@ import ReactPlayer from 'react-player';
 import { useCallback, useEffect, useRef, useState } from 'react';
 
 import styles from './index.module.css';
+import FirstLesson from '../first-lesson';
+import AboutSchool from '../about-school';
+import AboutTrainer from '../about-trainer';
 
 import Form from '../../components/form';
 
@@ -67,15 +70,14 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <Form isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
+
       <section className={styles.mainImgContainer}>
         <div className={styles.mainImgTexts}>
           <div className={styles.mainHeadingContainer}>
             <h1 className={styles.mainHeading}>HighTrick</h1>
           </div>
-
           <p className={styles.p}>Школа фристайла и футбольной техники</p>
         </div>
-
         <div className={styles.mainImg}>
           <img
             className={styles.img}
@@ -84,6 +86,7 @@ export default function Home() {
           />
         </div>
       </section>
+
       <h2 className={styles.secondHeading}>
         Что такое футбольный <br /> фристайл
       </h2>
@@ -110,6 +113,19 @@ export default function Home() {
           }}
         ></ReactPlayer>
       </div>
+
+      <section id ="first-lesson">
+        <FirstLesson />
+      </section>
+
+      <section id="about-school">
+        <AboutSchool />
+      </section>
+
+      <section id="about-trainer">
+        <AboutTrainer />
+      </section>
+
       <div className={styles.buttonContainer}>
         <Button onClick={showModal} text="ЗАПИСАТЬСЯ" />
       </div>

@@ -1,0 +1,26 @@
+.page {
+  height: 100%;
+  position: relative;
+  background: url(/public/Speckles.png);
+  font-family: Norwester;
+  background-size: contain;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.navbar {
+  z-index: 1000;
+  top: 0;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  overflow: scroll;
+}

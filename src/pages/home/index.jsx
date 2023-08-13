@@ -45,11 +45,7 @@ export default function Home() {
         if (videoElement) {
           const { top, bottom, height } = videoElement.getBoundingClientRect();
           const videoPosition = top + height / 2;
-
-          console.log('videoPosition', videoPosition);
-          console.log('viewportHeight', viewportHeight);
           const isCentered = videoPosition < viewportHeight;
-          console.log('isCentered', isCentered);
           setIsPlaying(isCentered); // Start the video when it is centered
         }
       };
@@ -113,18 +109,6 @@ export default function Home() {
           }}
         ></ReactPlayer>
       </div>
-
-      <section id ="first-lesson">
-        <FirstLesson />
-      </section>
-
-      <section id="about-school">
-        <AboutSchool />
-      </section>
-
-      <section id="about-trainer">
-        <AboutTrainer />
-      </section>
 
       <div className={styles.buttonContainer}>
         <Button onClick={showModal} text="ЗАПИСАТЬСЯ" />

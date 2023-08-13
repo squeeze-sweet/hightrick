@@ -1,18 +1,18 @@
 import cn from 'classnames';
-import { NavLink } from 'react-router-dom';
 import styles from './navigation.module.css';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import Form from '../../components/form';
 import IconWithText from '../icon-with-text';
 
 import Button from '../../components/button';
+import { Link } from 'react-scroll';
 
-export default function Navigation() {
+export default function Navigation({ container }) {
   const pagesNames = [
-    { name: 'Главная', route: '/' },
-    { name: 'О школе', route: '/about-school' },
-    { name: 'О тренере', route: '/about-trainer' },
-    { name: 'Первая тренировка', route: '/first-lesson' },
+    { name: 'Главная', route: 'home' },
+    { name: 'О школе', route: 'about-school' },
+    { name: 'О тренере', route: 'about-trainer' },
+    { name: 'Первая тренировка', route: 'first-lesson' },
   ];
 
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -25,20 +25,21 @@ export default function Navigation() {
     <section className={styles.container}>
       <Form isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
       {pagesNames.map(({ name, route }, index) => (
-        <NavLink
-          to={`${route}`}
+        <Link
+          to={route}
+          spy={true}
+          smooth={true}
           key={index}
-          className={({ isActive }) =>
-            !isActive ? styles.link : cn(styles.link, styles.active)
-          }
-          activeClassName={styles.active}
+          className={styles.link}
+          activeClass={styles.active}
+          container={container}
         >
           {name}
-        </NavLink>
+        </Link>
       ))}
 
-        <Button onClick={showModal} text="ЗАПИСАТЬСЯ" />
-        <IconWithText iconScr={'/whatsapp.svg'} text="+7(912) 272-04-09" />
+      <Button onClick={showModal} text="ЗАПИСАТЬСЯ" />
+      <IconWithText iconScr={'/whatsapp.svg'} text="+7(912) 272-04-09" />
     </section>
   );
 }

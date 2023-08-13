@@ -19,7 +19,6 @@ export default function Form({ isModalOpen, setIsModalOpen }) {
     additionalData: '',
   });
 
-  console.log('values', values);
   useEffect(() => {
     if (isModalOpen) {
       setValues({
@@ -56,7 +55,6 @@ export default function Form({ isModalOpen, setIsModalOpen }) {
     const endpoint = process.env.REACT_APP_API_ENDPOINT; // Замените на вашу переменную окружения с эндпоинтом
     const formData = { ...values };
 
-    console.log('endpoint', endpoint, 'formData', formData);
     axios
       .post(endpoint, formData)
       .then((response) => {

@@ -6,17 +6,26 @@ import { useRef, useState, useCallback, useEffect } from 'react';
 
 const Layout = ({ children }) => {
   const navElement = useRef(null);
+  const footerElement = useRef(null);
   const scrollContainer = useRef(null);
   const [plugHeight, setPlugHeight] = useState('');
+  const [footerHeight, setFooterHeight] = useState('');
 
   useEffect(() => {
     if (!navElement?.current) return;
     const resizeObserver = new ResizeObserver(() => {
       setPlugHeight(navElement.current.clientHeight);
     });
+    const resizeFooterObserver = new ResizeObserver(() => {
+      setFooterHeight(footerElement.current.clientHeight);
+    });
     resizeObserver.observe(navElement.current);
-    return () => resizeObserver.disconnect(); // clean up
-  }, [navElement?.current]);
+    resizeFooterObserver.observe(navElement.current);
+    return () => {
+      resizeObserver.disconnect();
+      resizeFooterObserver.disconnect();
+    }; // clean up
+  }, [navElement?.current, footerElement?.current]);
 
   return (
     <section className={styles.page}>
@@ -27,14 +36,16 @@ const Layout = ({ children }) => {
       </div>
       <main
         className={styles.content}
-        style={{ height: `calc(100% - ${plugHeight}px)` }}
+        style={{ height: `calc(100% - ${plugHeight}px - ${footerHeight}px)` }}
         ref={scrollContainer}
         id="scroll-continer"
       >
         {children}
         <Outlet />
       </main>
-      <Footer />
+      <div ref={footerElement}>
+        <Footer />
+      </div>
     </section>
   );
 };

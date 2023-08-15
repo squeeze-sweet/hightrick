@@ -70,7 +70,9 @@ export default function Home() {
       <section className={styles.mainImgContainer}>
         <div className={styles.mainImgTexts}>
           <div className={styles.mainHeadingContainer}>
-            <h1 className={styles.mainHeading}>HighTrick</h1>
+            <h1 className={styles.mainHeading} onClick={showModal}>
+              HighTrick
+            </h1>
           </div>
 
           <p className={styles.p}>Школа фристайла и футбольной техники</p>

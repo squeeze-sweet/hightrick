@@ -24,23 +24,26 @@ export default function Navigation({ container, activNavLink }) {
   return (
     <section className={styles.container}>
       <Form isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
-      {pagesNames.map(({ name, route }, index) => (
-        <Link
-          to={route}
-          spy={true}
-          smooth={true}
-          key={index}
-          className={cn(styles.link, {
-            [styles.active]: activNavLink === route,
-          })}
-          container={container}
-        >
-          {name}
-        </Link>
-      ))}
-
-      <Button onClick={showModal} text="ЗАПИСАТЬСЯ" />
-      <IconWithText iconScr={'/whatsapp.svg'} text="+7(912) 272-04-09" />
+      <section className={styles.links}>
+        {pagesNames.map(({ name, route }, index) => (
+          <Link
+            to={route}
+            spy={true}
+            smooth={true}
+            key={index}
+            className={cn(styles.link, {
+              [styles.active]: activNavLink === route,
+            })}
+            container={container}
+          >
+            {name}
+          </Link>
+        ))}
+      </section>
+      <section className={styles.contacts}>
+        <IconWithText iconScr={'/whatsapp.svg'} text="+7(912) 272-04-09" />
+        <Button onClick={showModal} text="ЗАПИСАТЬСЯ" />
+      </section>
     </section>
   );
 }

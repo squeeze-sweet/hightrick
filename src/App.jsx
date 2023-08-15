@@ -1,26 +1,26 @@
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
-
+import { useState } from 'react';
+import { Element } from 'react-scroll';
 import Layout from './components/page-layout';
 import Home from './pages/home';
 import AboutSchool from './pages/about-school';
 import AboutTrainer from './pages/about-trainer';
 import FirstLesson from './pages/first-lesson';
-import { Element } from 'react-scroll';
 
 const App = () => {
+  const [activNavLink, setActivNavLink] = useState('');
   return (
-    <Layout>
+    <Layout activNavLink={activNavLink}>
       <Element name="home">
-        <Home />
+        <Home setActivNavLink={setActivNavLink} />
       </Element>
       <Element name="about-school">
-        <AboutSchool />
+        <AboutSchool setActivNavLink={setActivNavLink} />
       </Element>
       <Element name="about-trainer">
-        <AboutTrainer />
+        <AboutTrainer setActivNavLink={setActivNavLink} />
       </Element>
       <Element name="first-lesson">
-        <FirstLesson />
+        <FirstLesson setActivNavLink={setActivNavLink} />
       </Element>
     </Layout>
   );

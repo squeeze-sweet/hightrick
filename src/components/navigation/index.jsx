@@ -1,13 +1,13 @@
 import cn from 'classnames';
 import styles from './navigation.module.css';
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useState } from 'react';
 import Form from '../../components/form';
 import IconWithText from '../icon-with-text';
 
 import Button from '../../components/button';
 import { Link } from 'react-scroll';
 
-export default function Navigation({ container }) {
+export default function Navigation({ container, activNavLink }) {
   const pagesNames = [
     { name: 'Главная', route: 'home' },
     { name: 'О школе', route: 'about-school' },
@@ -30,8 +30,9 @@ export default function Navigation({ container }) {
           spy={true}
           smooth={true}
           key={index}
-          className={styles.link}
-          activeClass={styles.active}
+          className={cn(styles.link, {
+            [styles.active]: activNavLink === route,
+          })}
           container={container}
         >
           {name}

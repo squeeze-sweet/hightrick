@@ -4,7 +4,7 @@ import { Outlet } from 'react-router-dom';
 import Footer from '../footer';
 import { useRef, useState, useCallback, useEffect } from 'react';
 
-const Layout = ({ children }) => {
+const Layout = ({ children, activNavLink }) => {
   const navElement = useRef(null);
   const footerElement = useRef(null);
   const scrollContainer = useRef(null);
@@ -32,7 +32,10 @@ const Layout = ({ children }) => {
       <div style={{ height: plugHeight, width: '100%' }}></div>
 
       <div ref={navElement} className={styles.navbar}>
-        <Navigation container={scrollContainer.current} />
+        <Navigation
+          container={scrollContainer.current}
+          activNavLink={activNavLink}
+        />
       </div>
       <main
         className={styles.content}

@@ -3,13 +3,10 @@ import ReactPlayer from 'react-player';
 import { useCallback, useEffect, useRef, useState } from 'react';
 
 import styles from './index.module.css';
-import FirstLesson from '../first-lesson';
-import AboutSchool from '../about-school';
-import AboutTrainer from '../about-trainer';
 
 import Form from '../../components/form';
 
-export default function Home() {
+export default function Home({ setActivNavLink }) {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(true);
 
@@ -59,12 +56,38 @@ export default function Home() {
     }
   }, [videoRef.current, isPlaying]);
 
+  const constNavControllElement = useRef(null);
+
+  useEffect(() => {
+    const scrollElement = document.getElementById('scroll-continer');
+    const checkElementPosition = () => {
+      const element = constNavControllElement.current; // Замените 'targetElement' на ID вашего целевого элемента
+      if (element) {
+        const elementRect = element.getBoundingClientRect();
+        const windowHeight =
+          window.innerHeight || document.documentElement.clientHeight;
+        const elementTop = elementRect.top;
+        const isInTopHalf = elementTop >= 0 && elementTop <= windowHeight / 2;
+        if (isInTopHalf) {
+          setActivNavLink('home');
+        }
+      }
+    };
+    scrollElement.addEventListener('scroll', checkElementPosition);
+    scrollElement.addEventListener('resize', checkElementPosition);
+    checkElementPosition(); // Проверка при первом рендере
+    return () => {
+      scrollElement.removeEventListener('scroll', checkElementPosition);
+      scrollElement.removeEventListener('resize', checkElementPosition);
+    };
+  }, [constNavControllElement]);
+
   const showModal = useCallback(() => {
     setIsModalOpen(true);
   }, [setIsModalOpen]);
 
   return (
-    <div className={styles.page}>
+    <div className={styles.page} ref={constNavControllElement}>
       <Form isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
 
       <section className={styles.mainImgContainer}>

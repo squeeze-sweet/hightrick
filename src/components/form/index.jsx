@@ -1,9 +1,9 @@
-import { Modal, Input } from 'antd';
-import TextArea from 'antd/es/input/TextArea';
+import { Modal } from 'antd';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import axios from 'axios';
 import styles from './form.module.css';
 import CustomInput from '../input';
+import CustomTextArea from '../textarea';
 
 export default function Form({ isModalOpen, setIsModalOpen }) {
   const [values, setValues] = useState({
@@ -19,7 +19,6 @@ export default function Form({ isModalOpen, setIsModalOpen }) {
     additionalData: '',
   });
 
-  console.log('values', values);
   useEffect(() => {
     if (isModalOpen) {
       setValues({
@@ -153,7 +152,7 @@ export default function Form({ isModalOpen, setIsModalOpen }) {
           style={{ borderColor: values.email ? 'red' : undefined }}
         />
 
-        <TextArea
+        <CustomTextArea
           className={styles.fontClass}
           value={values.additionalData}
           placeholder="Дополнительные данные"

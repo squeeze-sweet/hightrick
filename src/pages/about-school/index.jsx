@@ -23,16 +23,16 @@ export default function AboutSchool() {
         <div className={styles.left}>
           <h3>Стоимость занятий</h3>
           <InfoCard heading="Первая тренировка" text="Бесплатно" highlighted />
-          <InfoCard heading="Разовое посещение" text="500 рублей" />
+          <InfoCard heading="Разовое посещение" text="600 рублей" />
           <InfoCard
             heading="Абонемент на месяц"
-            text="3000 рублей (2 раза в неделю)"
+            text="3500 рублей (2 раза в неделю)"
           />
         </div>
         <div className={styles.left}>
           <h3>Расписание</h3>
           <InfoCard heading="Суббота:" text="c 19:30 до 20:30" />
-          <InfoCard heading="Воскресенье:" text="c 19:30 до 20:30" />
+          <InfoCard heading="Воскресенье:" text="c 19:45 до 20:45" />
         </div>
       </section>
       <div className={styles.mapContainer}>

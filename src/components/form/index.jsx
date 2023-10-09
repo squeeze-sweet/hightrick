@@ -55,7 +55,6 @@ export default function Form({ isModalOpen, setIsModalOpen }) {
     const endpoint = process.env.REACT_APP_API_ENDPOINT; // Замените на вашу переменную окружения с эндпоинтом
     const formData = { ...values };
 
-    console.log('endpoint', endpoint, 'formData', formData);
     axios
       .post(endpoint, formData)
       .then((response) => {
@@ -67,7 +66,13 @@ export default function Form({ isModalOpen, setIsModalOpen }) {
         setIsModalOpen(false);
         console.error(error);
       });
-  }, [setIsModalOpen, values.name, values.contact, values.email]);
+  }, [
+    setIsModalOpen,
+    values.name,
+    values.contact,
+    values.email,
+    values.additionalData,
+  ]);
 
   const handleCancel = useCallback(() => {
     setIsModalOpen(false);

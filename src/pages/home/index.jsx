@@ -42,11 +42,7 @@ export default function Home() {
         if (videoElement) {
           const { top, bottom, height } = videoElement.getBoundingClientRect();
           const videoPosition = top + height / 2;
-
-          console.log('videoPosition', videoPosition);
-          console.log('viewportHeight', viewportHeight);
           const isCentered = videoPosition < viewportHeight;
-          console.log('isCentered', isCentered);
           setIsPlaying(isCentered); // Start the video when it is centered
         }
       };

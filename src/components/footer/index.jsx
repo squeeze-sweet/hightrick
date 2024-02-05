@@ -1,9 +1,19 @@
 import styles from './footer.module.css';
 import IconWithText from '../icon-with-text';
+import { useNavigate } from 'react-router-dom';
+import { useCallback } from 'react';
+
 export default function Footer() {
+  const navigate = useNavigate();
+
+  const handleLogoClick = useCallback(() => {
+    navigate('/');
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+  }, []);
+
   return (
     <section className={styles.container}>
-      <div className={styles.left}>
+      <button className={styles.left} onClick={handleLogoClick}>
         <div className={styles.logoContainer}>
           <img
             className={styles.img}
@@ -12,7 +22,7 @@ export default function Footer() {
           />
           <p className={styles.logoText}>Hightrick</p>
         </div>
-      </div>
+      </button>
       <div className={styles.right}>
         <IconWithText
           iconScr={'/vk.svg'}

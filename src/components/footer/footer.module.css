@@ -22,6 +22,7 @@
 }
 
 .logoContainer {
+  cursor: pointer;
   position: relative;
   display: flex;
   align-items: center;
@@ -30,7 +31,9 @@
   border-radius: 10px;
   background-color: rgb(255, 255, 255);
 }
+
 .logoText {
+  cursor: pointer;
   color: #222858;
   margin-left: -20px;
 }

@@ -1,0 +1,46 @@
+.page {
+  width: 73%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.header {
+  margin: 100px auto 100px;
+}
+
+.photoCard {
+  margin-bottom: 100px;
+}
+
+.iframeContainer {
+  overflow: hidden;
+  border-radius: 16px;
+  position: relative;
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+.iframeFiller {
+  padding-top: 56.25%;
+}
+
+.text {
+  margin-bottom: 50px;
+}
+
+.contact {
+  margin-bottom: 100px;
+}
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 190px;
+}
+
+.mySwiper {
+  height: 100%;
+}
+
+.swiperContainer {
+  height: 300px;
+}

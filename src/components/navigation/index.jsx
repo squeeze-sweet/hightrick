@@ -8,6 +8,7 @@ export default function Navigation() {
     { name: 'О школе', route: '/about-school' },
     { name: 'О тренере', route: '/about-trainer' },
     { name: 'Первая тренировка', route: '/first-lesson' },
+    { name: 'Мерч', route: '/goods' },
   ];
 
   return (

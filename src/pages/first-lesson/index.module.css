@@ -5,7 +5,7 @@
 }
 
 .header {
-  margin: 100px auto 100px;
+  margin: 100px auto;
 }
 
 .text {
@@ -39,5 +39,11 @@
 @media only screen and (max-width: 1400px) {
   .skills {
     flex-wrap: wrap;
+  }
+}
+
+@media only screen and (max-width: 769px) {
+  .header {
+    margin-top: 30px;
   }
 }

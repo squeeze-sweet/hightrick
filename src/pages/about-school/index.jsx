@@ -26,12 +26,18 @@ export default function AboutSchool() {
           <InfoCard heading="Разовое посещение" text="600 рублей" />
           <InfoCard
             heading="Абонемент на месяц"
-            text="3500 рублей (2 раза в неделю)"
+            text={[
+              '• 3500 рублей (2 раза в неделю)',
+              '• 5250 рублей (3 раза в неделю)',
+            ]}
           />
         </div>
         <div className={styles.left}>
           <h3>Расписание</h3>
-          <InfoCard heading="Суббота:" text="c 19:30 до 20:30" />
+          <InfoCard
+            heading="Суббота:"
+            text={['• c 18:30 до 19:30 ', '• c 19:30 до 20:30 ']}
+          />
           <InfoCard heading="Воскресенье:" text="c 19:45 до 20:45" />
         </div>
       </section>

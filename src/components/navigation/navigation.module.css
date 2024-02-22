@@ -1,5 +1,5 @@
 .container {
-  width: 70%;
+  width: 80%;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -13,7 +13,7 @@
   cursor: pointer;
   min-width: 188px;
   height: 36px;
-  padding: 10px 26px;
+  padding: 10px 20px;
   text-align: center;
   display: flex;
   align-items: center;

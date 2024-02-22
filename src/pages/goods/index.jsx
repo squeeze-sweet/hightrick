@@ -78,6 +78,9 @@ export default function Goods() {
           <SwiperSlide>
             <img src={process.env.PUBLIC_URL + '/c1(4).png'} alt="image" />
           </SwiperSlide>
+          <SwiperSlide>
+            <img src={process.env.PUBLIC_URL + '/c1(6).png'} alt="image" />
+          </SwiperSlide>
         </Swiper>
       </div>
       <p className={styles.text}>

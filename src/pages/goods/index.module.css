@@ -29,7 +29,7 @@
 }
 
 .contact {
-  margin-bottom: 100px;
+  margin-bottom: 20px;
 }
 .buttonContainer {
   display: flex;
@@ -50,4 +50,8 @@
   .header {
     margin-top: 30px;
   }
+}
+
+.pt16 {
+  margin-top: 16px;
 }

@@ -67,25 +67,26 @@ export default function Goods() {
             <img src={process.env.PUBLIC_URL + '/c1(1).png'} alt="image" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={process.env.PUBLIC_URL + '/c1(3).png'} alt="image" />
-          </SwiperSlide>
-          <SwiperSlide>
             <img src={process.env.PUBLIC_URL + '/c1(2).png'} alt="image" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={process.env.PUBLIC_URL + '/c1(4).png'} alt="image" />
           </SwiperSlide>
           <SwiperSlide>
             <img src={process.env.PUBLIC_URL + '/c1(5).png'} alt="image" />
           </SwiperSlide>
+          <SwiperSlide>
+            <img src={process.env.PUBLIC_URL + '/c1(3).png'} alt="image" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src={process.env.PUBLIC_URL + '/c1(4).png'} alt="image" />
+          </SwiperSlide>
         </Swiper>
       </div>
       <p className={styles.text}>
-        Выражайте уникальность и завоевывайте внимание! Наши фирменные футболки
-        – это не просто одежда, это выражение свободы и творчества,
-        олицетворение стиля и искусства!
+        Выражайте уникальность и завоевывайте внимание!
       </p>
-      <p className={styles.text}>Состав: 100% хлопок</p>
+      <p className={styles.contact}>
+        Наши фирменные футболки – это не просто одежда, это выражение свободы и
+        творчества, олицетворение стиля и искусства! <br /> Состав: 100% хлопок.
+      </p>
       <p className={styles.contact}>
         По любым интересующим Вас вопросам Вы можете обращаться по номеру:
         8(912)-272-04-09 - Ришат

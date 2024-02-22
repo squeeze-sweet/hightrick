@@ -47,22 +47,22 @@ export default function Goods() {
           className={styles.mySwiper}
         >
           <SwiperSlide>
-            <img src={process.env.PUBLIC_URL + '/carousel1.jpg'} alt="image" />
+            <img src={process.env.PUBLIC_URL + '/c1(1).png'} alt="image" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={process.env.PUBLIC_URL + '/carousel2.jpg'} alt="image" />
+            <img src={process.env.PUBLIC_URL + '/c1(2).png'} alt="image" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={process.env.PUBLIC_URL + '/carousel3.jpg'} alt="image" />
+            <img src={process.env.PUBLIC_URL + '/c1(3).png'} alt="image" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={process.env.PUBLIC_URL + '/carousel4.jpg'} alt="image" />
+            <img src={process.env.PUBLIC_URL + '/c1(4).png'} alt="image" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={process.env.PUBLIC_URL + '/carousel5.jpg'} alt="image" />
+            <img src={process.env.PUBLIC_URL + '/c1(5).png'} alt="image" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={process.env.PUBLIC_URL + '/carousel6.jpg'} alt="image" />
+            <img src={process.env.PUBLIC_URL + '/c1(6).png'} alt="image" />
           </SwiperSlide>
         </Swiper>
       </div>

@@ -42,5 +42,6 @@
 }
 
 .swiperContainer {
-  height: 600px;
+  height: 20%;
+  margin-bottom: 20px;
 }

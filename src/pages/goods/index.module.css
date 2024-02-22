@@ -55,3 +55,10 @@
 .pt16 {
   margin-top: 16px;
 }
+
+.pink {
+  background: linear-gradient(90deg, #ff4040 0%, #ac00fd 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: rgba(0, 0, 0, 0);
+}

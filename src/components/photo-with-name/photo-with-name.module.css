@@ -8,6 +8,9 @@
   cursor: pointer;
 }
 
+.card:hover {
+  background: linear-gradient(90deg, rgba(255, 64, 64, 0.5) 0%, rgba(172, 0, 253, 0.2) 10%);
+}
 .heading {
   border-top: 0.8px solid #bfbfbf;
   margin: 25px;

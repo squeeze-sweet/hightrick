@@ -62,6 +62,7 @@ export default function Goods() {
         }}
         width={modalWidth}
       >
+        <div className={styles.gap} />
         <Swiper
           autoplay={{
             delay: 2500,
@@ -115,6 +116,7 @@ export default function Goods() {
         }}
         width={modalWidth}
       >
+        <div className={styles.gap} />
         <Swiper
           autoplay={{
             delay: 2500,

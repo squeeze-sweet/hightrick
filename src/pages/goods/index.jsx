@@ -102,9 +102,9 @@ export default function Goods() {
           <SwiperSlide>
             <img
               onClick={() => {
-                setDisplayedImgUrl("/design1.png");
+                setDisplayedImgUrl("/design4.png");
               }}
-              src={process.env.PUBLIC_URL + "/design1.png"}
+              src={process.env.PUBLIC_URL + "/design4.png"}
               alt="image"
             />
           </SwiperSlide>

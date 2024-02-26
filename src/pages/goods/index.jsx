@@ -40,10 +40,12 @@ export default function Goods() {
   }, [width]);
 
   const modalWidth = useMemo(() => {
-    if (width < 700) return "80%";
-    if (width < 1400) return "60%";
+    if (width < 500) return "70%";
+    if (width < 650) return "60%";
+    if (width < 1000) return "40%";
+    if (width < 1400) return "50%";
 
-    return "40%";
+    return "30%";
   }, [width]);
 
   return (

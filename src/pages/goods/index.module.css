@@ -61,3 +61,14 @@
   -webkit-background-clip: text;
   color: rgba(0, 0, 0, 0);
 }
+
+.goodsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.modalText {
+  margin: 20px;
+}

@@ -18,7 +18,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Norwester';
+  font-family: "Norwester";
   font-size: 16px;
   font-weight: 400;
   line-height: 16px;
@@ -41,4 +41,36 @@
   background-clip: text;
   -webkit-background-clip: text;
   color: rgba(0, 0, 0, 0);
+}
+
+.goods {
+  color: #bfbfbf;
+  animation-name: color;
+  animation-duration: 4s; /* Increased duration */
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out; /* Added to create smoother transition */
+}
+
+@keyframes color {
+  0% {
+    color: #bfbfbf;
+  }
+  25% {
+    color: #bfbfbf; /* Added keyframe */
+  }
+  50% {
+    background: linear-gradient(90deg, #ff4040 0%, #ac00fd 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: rgba(0, 0, 0, 0);
+  }
+  75% {
+    background: linear-gradient(90deg, #ff4040 0%, #ac00fd 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: rgba(0, 0, 0, 0);
+  }
+  100% {
+    color: #bfbfbf;
+  }
 }

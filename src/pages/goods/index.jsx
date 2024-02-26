@@ -52,8 +52,7 @@ export default function Goods() {
 
   return (
     <>
-      <Modal
-        className={styles.modal}
+      <Modal 
         footer={null}
         centered
         open={isDesignerModalOpen}
@@ -61,6 +60,7 @@ export default function Goods() {
           setIsDesignerModalOpen(false);
         }}
         width={modalWidth}
+
       >
         <div className={styles.gap} />
         <Swiper
@@ -99,13 +99,15 @@ export default function Goods() {
         <p className={styles.modalText}>
           Стиль: Наша дизайнерская футболка обеспечивает комфорт и свободу
           движения <br /> <br /> Эстетика: Не просто футболка, а настоящее
-          произведение к искусству <br />
+          произведение искусства <br />
           <br /> Детали: Каждая часть футболки имеет значение <br /> <br /> +100
           к стилю
           <br /> +100 к вдохновению <br />
           +100 к креативности
         </p>
-        <p className={styles.contact}>Цена: 4 999₽</p>
+        <p className={styles.modalText}>
+          <b>Цена: 4 999₽</b>
+        </p>
       </Modal>
       <Modal
         footer={null}
@@ -158,7 +160,9 @@ export default function Goods() {
           +100 к уверенности <br />
           +100 к уникальности
         </p>
-        <p className={styles.modalText}>Цена: 1 999₽</p>
+        <p className={styles.modalText}>
+          <b>Цена: 1 999₽</b>
+        </p>
       </Modal>
       <div className={styles.page}>
         <h2 className={styles.header}>наш Мерч</h2>
@@ -179,9 +183,6 @@ export default function Goods() {
             slidesPerView={visibleCardsNumber}
             spaceBetween={30}
             loop={true}
-            pagination={{
-              clickable: true,
-            }}
             navigation={true}
             modules={[Autoplay, Pagination, Navigation]}
             className={styles.mySwiper}

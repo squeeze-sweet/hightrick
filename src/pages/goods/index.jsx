@@ -47,6 +47,7 @@ export default function Goods() {
   return (
     <>
       <Modal
+        zIndex={1001}
         footer={null}
         centered
         open={displayedImgUrl}
@@ -55,11 +56,11 @@ export default function Goods() {
         }}
         width={modalWidth}
       >
-          <img
-            className={styles.modalImage}
-            src={process.env.PUBLIC_URL + displayedImgUrl}
-            alt=""
-          />
+        <img
+          className={styles.modalImage}
+          src={process.env.PUBLIC_URL + displayedImgUrl}
+          alt=""
+        />
       </Modal>
 
       <Modal

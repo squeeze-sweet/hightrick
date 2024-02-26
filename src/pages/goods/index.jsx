@@ -30,15 +30,9 @@ export default function Goods() {
   }, [width]);
 
   const bulletSize = useMemo(() => {
-    if (width < 300) return "6px";
-    if (width < 600) return "8px";
-    return "16px";
-  }, [width]);
-
-  const arrowSize = useMemo(() => {
-    if (width < 300) return "34px";
-    if (width < 600) return "24px";
-    return "44px";
+    if (width < 300) return "12px";
+    if (width < 600) return "18px";
+    return "24px";
   }, [width]);
 
   const modalWidth = useMemo(() => {
@@ -52,7 +46,7 @@ export default function Goods() {
 
   return (
     <>
-      <Modal 
+      <Modal
         footer={null}
         centered
         open={isDesignerModalOpen}
@@ -60,10 +54,12 @@ export default function Goods() {
           setIsDesignerModalOpen(false);
         }}
         width={modalWidth}
-
       >
         <div className={styles.gap} />
         <Swiper
+          observer
+          observeParents
+          parallax
           autoplay={{
             delay: 2500,
             disableOnInteraction: false,
@@ -74,7 +70,7 @@ export default function Goods() {
             "--swiper-pagination-bullet-inactive-opacity": "1",
             "--swiper-pagination-bullet-size": bulletSize,
             "--swiper-pagination-bullet-horizontal-gap": "6px",
-            "--swiper-navigation-size": arrowSize,
+            "--swiper-navigation-size": 0,
           }}
           slidesPerView={modalVisibleCardsNumber}
           spaceBetween={30}
@@ -120,6 +116,9 @@ export default function Goods() {
       >
         <div className={styles.gap} />
         <Swiper
+          observer
+          observeParents
+          parallax
           autoplay={{
             delay: 2500,
             disableOnInteraction: false,
@@ -130,7 +129,7 @@ export default function Goods() {
             "--swiper-pagination-bullet-inactive-opacity": "1",
             "--swiper-pagination-bullet-size": bulletSize,
             "--swiper-pagination-bullet-horizontal-gap": "6px",
-            "--swiper-navigation-size": arrowSize,
+            "--swiper-navigation-size": 0,
           }}
           slidesPerView={modalVisibleCardsNumber}
           spaceBetween={30}
@@ -168,9 +167,15 @@ export default function Goods() {
         <h2 className={styles.header}>наш Мерч</h2>
         <div className={styles.swiperContainer}>
           <Swiper
+            observer
+            observeParents
+            parallax
             autoplay={{
               delay: 2500,
               disableOnInteraction: false,
+            }}
+            pagination={{
+              clickable: true,
             }}
             style={{
               "--swiper-pagination-color": "#d41fa2",
@@ -178,7 +183,7 @@ export default function Goods() {
               "--swiper-pagination-bullet-inactive-opacity": "1",
               "--swiper-pagination-bullet-size": bulletSize,
               "--swiper-pagination-bullet-horizontal-gap": "6px",
-              "--swiper-navigation-size": arrowSize,
+              "--swiper-navigation-size": 0,
             }}
             slidesPerView={visibleCardsNumber}
             spaceBetween={30}

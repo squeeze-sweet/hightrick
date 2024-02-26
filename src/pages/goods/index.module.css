@@ -101,6 +101,14 @@
   }
 }
 
+@media only screen and (max-width: 769px) {
+  .page {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
 @media only screen and (max-width: 650px) {
   .modalText {
     font-size: 12px;

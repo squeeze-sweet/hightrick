@@ -75,11 +75,22 @@
   .mainImg {
     padding-top: 100px;
   }
+
 }
 
 @media only screen and (max-width: 769px) {
   .mainImg {
     padding-top: 60px;
+  }
+  .mainHeading {
+    font-size: 80px;
+    line-height: 100px;
+  }
+  .page {
+    width: 90%;
+  }
+  .buttonContainer {
+    margin-bottom: 90px;
   }
 }
 

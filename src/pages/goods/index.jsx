@@ -3,7 +3,8 @@ import PhotoWithName from "../../components/photo-with-name";
 import { Modal } from "antd";
 import { useState, useMemo } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
+
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import { useWindowSize } from "@uidotdev/usehooks";
 
 import "swiper/css";
@@ -11,6 +12,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "./styles.css";
+
 export default function Goods() {
   const [isClassicModalOpen, setIsClassicModalOpen] = useState(false);
   const [isDesignerModalOpen, setIsDesignerModalOpen] = useState(false);
@@ -51,6 +53,7 @@ export default function Goods() {
   return (
     <>
       <Modal
+        className={styles.modal}
         footer={null}
         centered
         open={isDesignerModalOpen}
@@ -60,6 +63,10 @@ export default function Goods() {
         width={modalWidth}
       >
         <Swiper
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
           style={{
             "--swiper-pagination-color": "#d41fa2",
             "--swiper-pagination-bullet-inactive-color": "#999999",
@@ -75,7 +82,7 @@ export default function Goods() {
             clickable: true,
           }}
           navigation={true}
-          modules={[Pagination, Navigation]}
+          modules={[Autoplay, Pagination, Navigation]}
           className={styles.mySwiper}
         >
           <SwiperSlide>
@@ -92,8 +99,8 @@ export default function Goods() {
           Стиль: Наша дизайнерская футболка обеспечивает комфорт и свободу
           движения <br /> <br /> Эстетика: Не просто футболка, а настоящее
           произведение к искусству <br />
-          <br /> Детали: Каждая часть футболки имеет значение <br /> <br /> +100 к
-          стилю
+          <br /> Детали: Каждая часть футболки имеет значение <br /> <br /> +100
+          к стилю
           <br /> +100 к вдохновению <br />
           +100 к креативности
         </p>
@@ -109,6 +116,10 @@ export default function Goods() {
         width={modalWidth}
       >
         <Swiper
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
           style={{
             "--swiper-pagination-color": "#d41fa2",
             "--swiper-pagination-bullet-inactive-color": "#999999",
@@ -124,7 +135,7 @@ export default function Goods() {
             clickable: true,
           }}
           navigation={true}
-          modules={[Pagination, Navigation]}
+          modules={[Autoplay, Pagination, Navigation]}
           className={styles.mySwiper}
         >
           <SwiperSlide>
@@ -138,8 +149,8 @@ export default function Goods() {
           </SwiperSlide>
         </Swiper>
         <p className={styles.modalText}>
-          Стиль: Минимализм с особым шармом  <br /> <br />Эстетика: Фасон футболки подойдет
-          абсолютно каждому <br />
+          Стиль: Минимализм с особым шармом <br /> <br />
+          Эстетика: Фасон футболки подойдет абсолютно каждому <br />
           <br /> Детали: Каждая часть футболки имеет значение <br /> <br />
           +100 к комфорту <br />
           +100 к уверенности <br />
@@ -151,6 +162,10 @@ export default function Goods() {
         <h2 className={styles.header}>наш Мерч</h2>
         <div className={styles.swiperContainer}>
           <Swiper
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
             style={{
               "--swiper-pagination-color": "#d41fa2",
               "--swiper-pagination-bullet-inactive-color": "#999999",
@@ -166,7 +181,7 @@ export default function Goods() {
               clickable: true,
             }}
             navigation={true}
-            modules={[Pagination, Navigation]}
+            modules={[Autoplay, Pagination, Navigation]}
             className={styles.mySwiper}
           >
             <SwiperSlide>

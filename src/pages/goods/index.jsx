@@ -16,6 +16,7 @@ import "./styles.css";
 export default function Goods() {
   const [isClassicModalOpen, setIsClassicModalOpen] = useState(false);
   const [isDesignerModalOpen, setIsDesignerModalOpen] = useState(false);
+  const [displayedImgUrl, setDisplayedImgUrl] = useState("");
   const { width } = useWindowSize();
 
   const visibleCardsNumber = useMemo(() => {
@@ -25,7 +26,7 @@ export default function Goods() {
   }, [width]);
 
   const modalVisibleCardsNumber = useMemo(() => {
-    if (width < 1000) return 1;
+    if (width < 650) return 1;
     return 2;
   }, [width]);
 
@@ -38,14 +39,29 @@ export default function Goods() {
   const modalWidth = useMemo(() => {
     if (width < 500) return "70%";
     if (width < 650) return "60%";
-    if (width < 1000) return "40%";
-    if (width < 1400) return "50%";
-
+    if (width < 1000) return "50%";
+    if (width < 1400) return "40%";
     return "30%";
   }, [width]);
 
   return (
     <>
+      <Modal
+        footer={null}
+        centered
+        open={displayedImgUrl}
+        onCancel={() => {
+          setDisplayedImgUrl("");
+        }}
+        width={modalWidth}
+      >
+          <img
+            className={styles.modalImage}
+            src={process.env.PUBLIC_URL + displayedImgUrl}
+            alt=""
+          />
+      </Modal>
+
       <Modal
         footer={null}
         centered
@@ -83,13 +99,31 @@ export default function Goods() {
           className={styles.mySwiper}
         >
           <SwiperSlide>
-            <img src={process.env.PUBLIC_URL + "/design1.png"} alt="image" />
+            <img
+              onClick={() => {
+                setDisplayedImgUrl("/design1.png");
+              }}
+              src={process.env.PUBLIC_URL + "/design1.png"}
+              alt="image"
+            />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={process.env.PUBLIC_URL + "/design2.png"} alt="image" />
+            <img
+              onClick={() => {
+                setDisplayedImgUrl("/design2.png");
+              }}
+              src={process.env.PUBLIC_URL + "/design2.png"}
+              alt="image"
+            />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={process.env.PUBLIC_URL + "/design3.png"} alt="image" />
+            <img
+              onClick={() => {
+                setDisplayedImgUrl("/design3.png");
+              }}
+              src={process.env.PUBLIC_URL + "/design3.png"}
+              alt="image"
+            />
           </SwiperSlide>
         </Swiper>
         <p className={styles.modalText}>
@@ -142,13 +176,31 @@ export default function Goods() {
           className={styles.mySwiper}
         >
           <SwiperSlide>
-            <img src={process.env.PUBLIC_URL + "/classic1.png"} alt="image" />
+            <img
+              onClick={() => {
+                setDisplayedImgUrl("/classic1.png");
+              }}
+              src={process.env.PUBLIC_URL + "/classic1.png"}
+              alt="image"
+            />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={process.env.PUBLIC_URL + "/classic2.png"} alt="image" />
+            <img
+              onClick={() => {
+                setDisplayedImgUrl("/classic2.png");
+              }}
+              src={process.env.PUBLIC_URL + "/classic2.png"}
+              alt="image"
+            />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={process.env.PUBLIC_URL + "/classic3.png"} alt="image" />
+            <img
+              onClick={() => {
+                setDisplayedImgUrl("/classic3.png");
+              }}
+              src={process.env.PUBLIC_URL + "/classic3.png"}
+              alt="image"
+            />
           </SwiperSlide>
         </Swiper>
         <p className={styles.modalText}>

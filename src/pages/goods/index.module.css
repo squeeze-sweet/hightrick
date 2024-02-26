@@ -70,5 +70,41 @@
 }
 
 .modalText {
-  margin: 20px;
+  margin: 24px;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 0em;
+}
+
+/* Мобильные устройства (планшеты в вертикальной ориентации) */
+@media only screen and (max-width: 1440px) {
+  .modalText {
+    font-size: 20px;
+    line-height: 26px;
+    letter-spacing: 0em;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .modalText {
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0em;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .modalText {
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0em;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .modalText {
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0em;
+  }
 }

@@ -1,7 +1,7 @@
 import styles from "./index.module.css";
 import PhotoWithName from "../../components/photo-with-name";
 import { Modal } from "antd";
-import {  useState, useMemo } from "react";
+import { useState, useMemo } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import { useWindowSize } from "@uidotdev/usehooks";
@@ -23,8 +23,7 @@ export default function Goods() {
   }, [width]);
 
   const modalVisibleCardsNumber = useMemo(() => {
-    if (width < 700) return 2;
-    if (width < 400) return 1;
+    if (width < 1000) return 1;
     return 2;
   }, [width]);
 
@@ -42,6 +41,8 @@ export default function Goods() {
 
   const modalWidth = useMemo(() => {
     if (width < 700) return "80%";
+    if (width < 1400) return "60%";
+
     return "40%";
   }, [width]);
 

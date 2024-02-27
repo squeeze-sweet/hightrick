@@ -26,8 +26,9 @@ export default function Goods() {
   }, [width]);
 
   const modalVisibleCardsNumber = useMemo(() => {
+    if (width < 1000) return 2;
     if (width < 650) return 1;
-    return 2;
+    return 3;
   }, [width]);
 
   const bulletSize = useMemo(() => {

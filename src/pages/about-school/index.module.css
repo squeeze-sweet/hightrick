@@ -7,6 +7,7 @@
 .header {
   margin: 100px 51px auto;
 }
+
 .locationInfo {
   margin-bottom: 100px;
 }
@@ -33,15 +34,26 @@
   height: 500px;
   margin-bottom: 100px;
 }
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 190px;
+}
 
 @media only screen and (max-width: 769px) {
   .mapContainer {
     height: 200px;
   }
-}
-
-.buttonContainer {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 190px;
+  .header {
+    margin-top: 30px;
+  }
+  .page {
+    width: 90%;
+  }
+  .info {
+    gap: 90px;
+  }
+  .buttonContainer {
+    margin-bottom: 90px;
+  }
 }

@@ -1,0 +1,43 @@
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+* {
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-button-next {
+  color: white;
+}
+
+.swiper-button-prev {
+  color: white;
+}
+
+.ant-modal-content {
+  background: url(/public/Speckles.png);
+}

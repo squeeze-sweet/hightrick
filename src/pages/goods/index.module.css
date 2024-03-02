@@ -1,0 +1,128 @@
+.page {
+  width: 73%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.header {
+  margin: 100px auto;
+}
+
+.photoCard {
+  margin-bottom: 100px;
+}
+
+.iframeContainer {
+  overflow: hidden;
+  border-radius: 16px;
+  position: relative;
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+.iframeFiller {
+  padding-top: 56.25%;
+}
+
+.text {
+  margin-bottom: 50px;
+}
+
+.contact {
+  margin-bottom: 20px;
+}
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 190px;
+}
+
+.mySwiper {
+  height: 100%;
+}
+
+.swiperContainer {
+  margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 769px) {
+  .header {
+    margin-top: 30px;
+  }
+}
+
+.pt16 {
+  margin-top: 16px;
+}
+
+.pink {
+  background: linear-gradient(90deg, #ff4040 0%, #ac00fd 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: rgba(0, 0, 0, 0);
+}
+
+.goodsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.modalText {
+  margin: 24px;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 0em;
+}
+
+/* Мобильные устройства (планшеты в вертикальной ориентации) */
+@media only screen and (max-width: 1440px) {
+  .modalText {
+    font-size: 20px;
+    line-height: 26px;
+    letter-spacing: 0em;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .modalText {
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0em;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .modalText {
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0em;
+  }
+}
+
+@media only screen and (max-width: 769px) {
+  .page {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .modalText {
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0em;
+  }
+}
+
+.gap {
+  margin-top: 30px;
+}
+
+.modalImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Fits the entire image inside the container without stretching */
+}

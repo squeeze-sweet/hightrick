@@ -38,7 +38,7 @@ export default function AboutSchool() {
             heading="Суббота:"
             text={['• c 18:30 до 19:30 ', '• c 19:30 до 20:30 ']}
           />
-          <InfoCard heading="Воскресенье:" text="c 19:45 до 20:45" />
+          <InfoCard heading="Воскресенье:" text="• c 19:45 до 20:45" />
         </div>
       </section>
       <div className={styles.mapContainer}>

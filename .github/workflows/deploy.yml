@@ -28,7 +28,7 @@ jobs:
         port: ${{ secrets.PORT }}
         password: ${{ secrets.PASSWORD }}
         source: "."
-        target: "/var/www/hightrick"
+        target: "~/github-actions/hightrick"
 
     - name: Executing remote command
       uses: appleboy/ssh-action@v1.0.3

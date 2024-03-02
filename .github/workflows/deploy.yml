@@ -27,7 +27,7 @@ jobs:
         username: ${{ secrets.USERNAME }}
         port: ${{ secrets.PORT }}
         password: ${{ secrets.PASSWORD }}
-        source: "."
+        source: "build"
         target: "~/github-actions/hightrick"
 
     - name: Executing remote command

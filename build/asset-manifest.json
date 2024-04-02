@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/static/css/main.69a9d10b.css",
+    "main.js": "/static/js/main.a746c209.js",
+    "static/js/787.0cad08ac.chunk.js": "/static/js/787.0cad08ac.chunk.js",
+    "static/media/Speckles.png": "/static/media/Speckles.66f2aa823b143840b6ba.png",
+    "static/media/norwester.svg": "/static/media/norwester.37438422eda6513993d1.svg",
+    "static/media/norwester.otf": "/static/media/norwester.ce6a5871f21a2e4a9149.otf",
+    "static/media/norwester.ttf": "/static/media/norwester.044a189f9f21b2997fcb.ttf",
+    "static/media/norwester.woff": "/static/media/norwester.50ec097841efd46d1e57.woff",
+    "static/media/norwester.woff2": "/static/media/norwester.1260befb7fa688355307.woff2",
+    "index.html": "/index.html",
+    "main.69a9d10b.css.map": "/static/css/main.69a9d10b.css.map",
+    "main.a746c209.js.map": "/static/js/main.a746c209.js.map",
+    "787.0cad08ac.chunk.js.map": "/static/js/787.0cad08ac.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.69a9d10b.css",
+    "static/js/main.a746c209.js"
+  ]
+}

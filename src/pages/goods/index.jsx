@@ -1,22 +1,22 @@
-import styles from "./index.module.css";
-import PhotoWithName from "../../components/photo-with-name";
-import { Modal } from "antd";
-import { useState, useMemo } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
+import styles from './index.module.css';
+import PhotoWithName from '../../components/photo-with-name';
+import { Modal } from 'antd';
+import { useState, useMemo } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
-import { useWindowSize } from "@uidotdev/usehooks";
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import { useWindowSize } from '@uidotdev/usehooks';
 
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
-import "./styles.css";
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+import './styles.css';
 
 export default function Goods() {
   const [isClassicModalOpen, setIsClassicModalOpen] = useState(false);
   const [isDesignerModalOpen, setIsDesignerModalOpen] = useState(false);
-  const [displayedImgUrl, setDisplayedImgUrl] = useState("");
+  const [displayedImgUrl, setDisplayedImgUrl] = useState('');
   const { width } = useWindowSize();
 
   const visibleCardsNumber = useMemo(() => {
@@ -32,17 +32,17 @@ export default function Goods() {
   }, [width]);
 
   const bulletSize = useMemo(() => {
-    if (width < 300) return "12px";
-    if (width < 600) return "18px";
-    return "24px";
+    if (width < 300) return '12px';
+    if (width < 600) return '18px';
+    return '24px';
   }, [width]);
 
   const modalWidth = useMemo(() => {
-    if (width < 500) return "70%";
-    if (width < 650) return "60%";
-    if (width < 1000) return "50%";
-    if (width < 1400) return "40%";
-    return "30%";
+    if (width < 500) return '70%';
+    if (width < 650) return '60%';
+    if (width < 1000) return '50%';
+    if (width < 1400) return '40%';
+    return '30%';
   }, [width]);
 
   return (
@@ -53,7 +53,7 @@ export default function Goods() {
         centered
         open={displayedImgUrl}
         onCancel={() => {
-          setDisplayedImgUrl("");
+          setDisplayedImgUrl('');
         }}
         width={modalWidth}
       >
@@ -83,12 +83,12 @@ export default function Goods() {
             disableOnInteraction: false,
           }}
           style={{
-            "--swiper-pagination-color": "#d41fa2",
-            "--swiper-pagination-bullet-inactive-color": "#999999",
-            "--swiper-pagination-bullet-inactive-opacity": "1",
-            "--swiper-pagination-bullet-size": bulletSize,
-            "--swiper-pagination-bullet-horizontal-gap": "6px",
-            "--swiper-navigation-size": 0,
+            '--swiper-pagination-color': '#d41fa2',
+            '--swiper-pagination-bullet-inactive-color': '#999999',
+            '--swiper-pagination-bullet-inactive-opacity': '1',
+            '--swiper-pagination-bullet-size': bulletSize,
+            '--swiper-pagination-bullet-horizontal-gap': '6px',
+            '--swiper-navigation-size': 0,
           }}
           slidesPerView={modalVisibleCardsNumber}
           spaceBetween={30}
@@ -100,30 +100,30 @@ export default function Goods() {
           modules={[Autoplay, Pagination, Navigation]}
           className={styles.mySwiper}
         >
-          <SwiperSlide>
+          <SwiperSlide className="12">
             <img
               onClick={() => {
-                setDisplayedImgUrl("/design4.png");
+                setDisplayedImgUrl('/design4.png');
               }}
-              src={process.env.PUBLIC_URL + "/design4.png"}
+              src={process.env.PUBLIC_URL + '/design4.png'}
               alt="image"
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
               onClick={() => {
-                setDisplayedImgUrl("/design2.png");
+                setDisplayedImgUrl('/design2.png');
               }}
-              src={process.env.PUBLIC_URL + "/design2.png"}
+              src={process.env.PUBLIC_URL + '/design2.png'}
               alt="image"
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
               onClick={() => {
-                setDisplayedImgUrl("/design3.png");
+                setDisplayedImgUrl('/design3.png');
               }}
-              src={process.env.PUBLIC_URL + "/design3.png"}
+              src={process.env.PUBLIC_URL + '/design3.png'}
               alt="image"
             />
           </SwiperSlide>
@@ -141,6 +141,7 @@ export default function Goods() {
           <b>Цена: 4 999₽</b>
         </p>
       </Modal>
+
       <Modal
         footer={null}
         centered
@@ -160,12 +161,12 @@ export default function Goods() {
             disableOnInteraction: false,
           }}
           style={{
-            "--swiper-pagination-color": "#d41fa2",
-            "--swiper-pagination-bullet-inactive-color": "#999999",
-            "--swiper-pagination-bullet-inactive-opacity": "1",
-            "--swiper-pagination-bullet-size": bulletSize,
-            "--swiper-pagination-bullet-horizontal-gap": "6px",
-            "--swiper-navigation-size": 0,
+            '--swiper-pagination-color': '#d41fa2',
+            '--swiper-pagination-bullet-inactive-color': '#999999',
+            '--swiper-pagination-bullet-inactive-opacity': '1',
+            '--swiper-pagination-bullet-size': bulletSize,
+            '--swiper-pagination-bullet-horizontal-gap': '6px',
+            '--swiper-navigation-size': 0,
           }}
           slidesPerView={modalVisibleCardsNumber}
           spaceBetween={30}
@@ -180,27 +181,27 @@ export default function Goods() {
           <SwiperSlide>
             <img
               onClick={() => {
-                setDisplayedImgUrl("/classic1.png");
+                setDisplayedImgUrl('/classic1.png');
               }}
-              src={process.env.PUBLIC_URL + "/classic1.png"}
+              src={process.env.PUBLIC_URL + '/classic1.png'}
               alt="image"
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
               onClick={() => {
-                setDisplayedImgUrl("/classic2.png");
+                setDisplayedImgUrl('/classic2.png');
               }}
-              src={process.env.PUBLIC_URL + "/classic2.png"}
+              src={process.env.PUBLIC_URL + '/classic2.png'}
               alt="image"
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
               onClick={() => {
-                setDisplayedImgUrl("/classic3.png");
+                setDisplayedImgUrl('/classic3.png');
               }}
-              src={process.env.PUBLIC_URL + "/classic3.png"}
+              src={process.env.PUBLIC_URL + '/classic3.png'}
               alt="image"
             />
           </SwiperSlide>
@@ -232,12 +233,12 @@ export default function Goods() {
               clickable: true,
             }}
             style={{
-              "--swiper-pagination-color": "#d41fa2",
-              "--swiper-pagination-bullet-inactive-color": "#999999",
-              "--swiper-pagination-bullet-inactive-opacity": "1",
-              "--swiper-pagination-bullet-size": bulletSize,
-              "--swiper-pagination-bullet-horizontal-gap": "6px",
-              "--swiper-navigation-size": 0,
+              '--swiper-pagination-color': '#d41fa2',
+              '--swiper-pagination-bullet-inactive-color': '#999999',
+              '--swiper-pagination-bullet-inactive-opacity': '1',
+              '--swiper-pagination-bullet-size': bulletSize,
+              '--swiper-pagination-bullet-horizontal-gap': '6px',
+              '--swiper-navigation-size': 0,
             }}
             slidesPerView={visibleCardsNumber}
             spaceBetween={30}
@@ -247,22 +248,58 @@ export default function Goods() {
             className={styles.mySwiper}
           >
             <SwiperSlide>
-              <img src={process.env.PUBLIC_URL + "/c1(1).png"} alt="image" />
+              <img
+                onClick={() => {
+                  setDisplayedImgUrl('/c1(1).png');
+                }}
+                src={process.env.PUBLIC_URL + '/c1(1).png'}
+                alt="image"
+              />
             </SwiperSlide>
             <SwiperSlide>
-              <img src={process.env.PUBLIC_URL + "/c1(2).png"} alt="image" />
+              <img
+                onClick={() => {
+                  setDisplayedImgUrl('/c1(2).png');
+                }}
+                src={process.env.PUBLIC_URL + '/c1(2).png'}
+                alt="image"
+              />
             </SwiperSlide>
             <SwiperSlide>
-              <img src={process.env.PUBLIC_URL + "/c1(5).png"} alt="image" />
+              <img
+                onClick={() => {
+                  setDisplayedImgUrl('/c1(5).png');
+                }}
+                src={process.env.PUBLIC_URL + '/c1(5).png'}
+                alt="image"
+              />
             </SwiperSlide>
             <SwiperSlide>
-              <img src={process.env.PUBLIC_URL + "/c1(3).png"} alt="image" />
+              <img
+                onClick={() => {
+                  setDisplayedImgUrl('/c1(3).png');
+                }}
+                src={process.env.PUBLIC_URL + '/c1(3).png'}
+                alt="image"
+              />
             </SwiperSlide>
             <SwiperSlide>
-              <img src={process.env.PUBLIC_URL + "/c1(4).png"} alt="image" />
+              <img
+                onClick={() => {
+                  setDisplayedImgUrl('/c1(4).png');
+                }}
+                src={process.env.PUBLIC_URL + '/c1(4).png'}
+                alt="image"
+              />
             </SwiperSlide>
             <SwiperSlide>
-              <img src={process.env.PUBLIC_URL + "/c1(6).png"} alt="image" />
+              <img
+                onClick={() => {
+                  setDisplayedImgUrl('/c1(6).png');
+                }}
+                src={process.env.PUBLIC_URL + '/c1(6).png'}
+                alt="image"
+              />
             </SwiperSlide>
           </Swiper>
         </div>
@@ -271,20 +308,20 @@ export default function Goods() {
         </p>
         <p className={styles.contact}>
           Наши фирменные футболки – это не просто одежда, это выражение свободы
-          и творчества, олицетворение стиля и искусства! <br />{" "}
+          и творчества, олицетворение стиля и искусства! <br />{' '}
           <span className={styles.pink}>Состав: 100% хлопок.</span>
         </p>
 
         <div className={styles.goodsContainer}>
           <PhotoWithName
-            photoSrc={"/design1.png"}
+            photoSrc={'/design1.png'}
             heading="Дизайнерская футболка"
             onClick={() => {
               setIsDesignerModalOpen(true);
             }}
           />
           <PhotoWithName
-            photoSrc={"/classic1.png"}
+            photoSrc={'/classic1.png'}
             heading="Классическая футболка"
             onClick={() => {
               setIsClassicModalOpen(true);
